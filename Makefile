@@ -130,7 +130,7 @@ sim_results  := $(bld_dir)/sim_results.txt
 todo_list    := $(bld_dir)/todo.txt
 # Environment
 export CROSS_PREFIX  ?= riscv64-unknown-elf-
-export RISCV_GCC     ?= $(CROSS_PREFIX)gcc
+export RISCV_GCC     ?= $(CROSS_PREFIX)gcc -misa-spec=2.2
 export RISCV_OBJDUMP ?= $(CROSS_PREFIX)objdump -D
 export RISCV_OBJCOPY ?= $(CROSS_PREFIX)objcopy -O verilog
 export RISCV_READELF ?= $(CROSS_PREFIX)readelf -s

@@ -93,6 +93,7 @@ build_verilator: $(sv_list)
 	--Mdir $(bld_dir)/verilator \
 	-I$(rtl_inc_dir) \
 	-I$(rtl_inc_tb_dir) \
+	--timing \
 	$(SIM_BUILD_OPTS) \
 	$(sv_list); \
 	cd verilator; \
@@ -120,6 +121,7 @@ build_verilator_wf: $(sv_list)
 	--Mdir $(bld_dir)/verilator \
 	-I$(rtl_inc_dir) \
 	-I$(rtl_inc_tb_dir) \
+	--timing \
 	$(SIM_BUILD_OPTS) \
 	$(sv_list); \
 	cd verilator; \
